@@ -2,6 +2,7 @@
 #pick number from 1 to 20 game
 
 import random
+from colorama import Fore
 
 print('Welcome to my game')
 print('')
@@ -16,19 +17,19 @@ for i in range(21):
 print()
 
 while userinput != num:
-    userinput=input('pick a number: ')
+    userinput=input(Fore.WHITE + 'pick a number: ')
     userinput=int(userinput)
 
     if userinput != num2:
         userinput=int(userinput)
     elif userinput == num2:
-        print('YOU PICKED THE SECOND NUMBER YOU WIN!!!!')
+        print(Fore.GREEN + 'YOU PICKED THE SECOND NUMBER YOU WIN!!!!')
         break
     else:
-        print('*wrong number*')
+        print(Fore.RED + '*wrong number*')
         
     if userinput == num:
-        print('YOU WON!!!')
+        print(Fore.GREEN + 'YOU WON!!!')
         break
     else:
-        print('***wrong number***')
+        print(Fore.RED + '***wrong number***')
